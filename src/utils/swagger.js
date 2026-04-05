@@ -6,14 +6,17 @@ const options = {
     info: {
       title: "Finance Dashboard API",
       version: "1.0.0",
-      description:
-        "A role-based finance record management API built by Hemavathy K. Supports user authentication, financial record CRUD, and dashboard analytics with three roles: viewer, analyst, and admin.",
+      description: "A role-based finance record management API built by Hemavathy K.",
       contact: {
         name: "Hemavathy K",
         email: "hemavathykamal08@gmail.com",
       },
     },
     servers: [
+      {
+        url: "https://finance-backend-veow.onrender.com",
+        description: "Live server",
+      },
       {
         url: "http://localhost:3000",
         description: "Local development server",
@@ -25,8 +28,7 @@ const options = {
           type: "http",
           scheme: "bearer",
           bearerFormat: "JWT",
-          description:
-            "Login via POST /api/auth/login to get a token, then paste it here.",
+          description: "Login via POST /api/auth/login to get a token, then paste it here.",
         },
       },
       schemas: {
@@ -50,9 +52,7 @@ const options = {
             category:        { type: "string", example: "Salary" },
             date:            { type: "string", example: "2026-04-01" },
             notes:           { type: "string", example: "Monthly salary" },
-            created_by:      { type: "string" },
             created_by_name: { type: "string", example: "Admin User" },
-            created_at:      { type: "string" },
           },
         },
         Error: {
@@ -67,7 +67,7 @@ const options = {
             error:   { type: "string", example: "Validation failed" },
             details: {
               type: "object",
-              example: { amount: "Amount is required", date: "Date is required" },
+              example: { amount: "Amount is required" },
             },
           },
         },

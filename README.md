@@ -58,11 +58,11 @@ npm run seed
 npm start
 ```
 
-Server runs at `http://localhost:3000`
+Server runs at `https://finance-backend-veow.onrender.com`
 
-To check it's working: `http://localhost:3000/health`
+To check it's working: `https://finance-backend-veow.onrender.com/health`
 
-Swagger API docs (interactive): `http://localhost:3000/api-docs`
+Swagger API docs (interactive): `https://finance-backend-veow.onrender.com/api-docs`
 
 ### Run Tests
 
